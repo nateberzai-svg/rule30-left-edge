@@ -1,0 +1,19 @@
+# Eight coin machines across the doubling DD = 2,107,985,254 (10.237d G)
+# start DD-2e6 with the wall's labels there (branch 1 at 1,420,878,968), W=64 TOP=66, coin seeds 1..8, M0 = 1.3213*D0 + 7*seed; MDUMP = M per diagonal
+seed 1: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 0 taken (M_d=2785281096, M_d mod 128 = 72, period of the new label 64)
+seed 2: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 0 taken (M_d=2785280392, M_d mod 128 = 8, period of the new label 64)
+seed 3: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 0 taken (M_d=2785283272, M_d mod 128 = 72, period of the new label 64)
+seed 4: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 1 taken (M_d=2785279784, M_d mod 128 = 40, period of the new label 64)
+seed 5: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 1 taken (M_d=2785279720, M_d mod 128 = 104, period of the new label 64)
+seed 6: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 0 taken (M_d=2785280858, M_d mod 128 = 90, period of the new label 64)
+seed 7: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 1 taken (M_d=2785281128, M_d mod 128 = 104, period of the new label 64)
+seed 8: d=2107985254: frozen diagonal, p_(d-1)=32 weight 17, branch 1 taken (M_d=2785282216, M_d mod 128 = 40, period of the new label 64)
+# front rows M_j for j = DD-8 .. DD+2, absolute and mod 32 (dump[k] = M_{D0+k+1})
+mdump_s1.bin M = [2785281092, 2785281094, 2785281094, 2785281096, 2785281096, 2785281096, 2785281096, 2785281096, 2785281096, 2785281096, 2785281099]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 8
+mdump_s2.bin M = [2785280388, 2785280390, 2785280390, 2785280392, 2785280392, 2785280392, 2785280392, 2785280392, 2785280392, 2785280392, 2785280395]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 8
+mdump_s3.bin M = [2785283268, 2785283270, 2785283270, 2785283272, 2785283272, 2785283272, 2785283272, 2785283272, 2785283272, 2785283272, 2785283275]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 8
+mdump_s4.bin M = [2785279780, 2785279782, 2785279782, 2785279784, 2785279784, 2785279784, 2785279784, 2785279784, 2785279784, 2785279784, 2785279787]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 40
+mdump_s5.bin M = [2785279716, 2785279718, 2785279718, 2785279720, 2785279720, 2785279720, 2785279720, 2785279720, 2785279720, 2785279720, 2785279723]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 40
+mdump_s6.bin M = [2785280853, 2785280853, 2785280853, 2785280854, 2785280854, 2785280856, 2785280856, 2785280858, 2785280858, 2785280858, 2785280858]  mod 32: [21, 21, 21, 22, 22, 24, 24, 26, 26, 26, 26]  M_DD mod 64 = 26
+mdump_s7.bin M = [2785281124, 2785281126, 2785281126, 2785281128, 2785281128, 2785281128, 2785281128, 2785281128, 2785281128, 2785281128, 2785281131]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 40
+mdump_s8.bin M = [2785282212, 2785282214, 2785282214, 2785282216, 2785282216, 2785282216, 2785282216, 2785282216, 2785282216, 2785282216, 2785282219]  mod 32: [4, 6, 6, 8, 8, 8, 8, 8, 8, 8, 11]  M_DD mod 64 = 40

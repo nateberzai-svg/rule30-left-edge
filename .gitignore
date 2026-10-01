@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+results/frozen_column/*.bin

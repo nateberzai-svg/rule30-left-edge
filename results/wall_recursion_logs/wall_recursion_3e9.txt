@@ -1,0 +1,5 @@
+start d=90000: a=88d1fb8488d1fb84 (p=32) b=7cb53b6b7cb53b6b (p=32)
+d=1420878968: frozen diagonal (r_d = 0), p_(d-1)=32, weight 20, candidates 93425cac93425cac / 6cbda3536cbda353 (period 32)
+  no branch bit given: stop
+period histogram (p: count): 1: 1 2: 1 4: 1 8: 85 16: 21605 32: 1420767275
+final labels: a=dae372fadae372fa b=0000000000000000

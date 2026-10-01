@@ -1,0 +1,55 @@
+# The seed's wall beyond 1.508*10^11, computed on a second machine (the author's PC, under WSL Ubuntu), continuing
+# from results/wall_recursion_logs/frontier_checkpoint.txt with
+#   ./wall_recursion128 bb28d1da3719d3cdbb28d1da3719d3cd 4efb996adbd644c74efb996adbd644c7 150800000000 1000000000000 "" 128 - > wall128_to_1e12.log
+# With no branch bits the program stops at the first frozen diagonal, and with STOPP = 128 when the running maximum
+# of the period reaches 128; either stop prints the histogram and the final labels at once. A checkpoint line every
+# 10^8 diagonals means neither happened.
+# The run ended at d = 10^12 (reported 2026-09-30). Below are the lines the author copied from its log between
+# 2026-09-25 and 2026-09-30; the last three are the end of the log. The histogram counts the minimal period of each
+# label r_{d+1}, d = 150,800,000,000 .. 10^12 - 1. Its total, 849,200,000,000, is every diagonal of the run, so the
+# run never stopped early: no frozen diagonal and no period 128 up to 10^12. The 188 labels of period 32 are chance:
+# a uniformly random 64-bit pattern repeats with period 32 with probability 2^-32, so 197.7 +- 14.1 are expected.
+# The whole log (8,492 checkpoint lines) stays on the author's PC as ~/rule30run/wall128_to_1e12.log.
+checkpoint d=150900000000: a=8f72fb25ad6bcf4e8f72fb25ad6bcf4e b=09cec6c46349ba5309cec6c46349ba53
+checkpoint d=151000000000: a=6e2de5fda9d179d16e2de5fda9d179d1 b=bbdb5135229f7b19bbdb5135229f7b19
+checkpoint d=151100000000: a=ba78694bf58a550cba78694bf58a550c b=e0095fb3d89ac849e0095fb3d89ac849
+checkpoint d=304600000000: a=bdcae6891af51e41bdcae6891af51e41 b=7d0b145c2b70f6917d0b145c2b70f691
+checkpoint d=304700000000: a=ec88a37f862b0086ec88a37f862b0086 b=cb52581409aa9beccb52581409aa9bec
+checkpoint d=304800000000: a=d4200ee9ae00f68ad4200ee9ae00f68a b=3f5b57679ee1f9683f5b57679ee1f968
+checkpoint d=430400000000: a=2124c1a20581a9932124c1a20581a993 b=6f2a2f0ae1128e526f2a2f0ae1128e52
+checkpoint d=430500000000: a=504a2803d81b6513504a2803d81b6513 b=f0cde2e814c152e2f0cde2e814c152e2
+checkpoint d=430600000000: a=afa26fa7a1995700afa26fa7a1995700 b=8914c4e2dfbdeb598914c4e2dfbdeb59
+checkpoint d=543700000000: a=97fefbb3961f78ce97fefbb3961f78ce b=d08d67bf230f1d71d08d67bf230f1d71
+checkpoint d=543800000000: a=9094ee0da9201f679094ee0da9201f67 b=9224e86afcb13adf9224e86afcb13adf
+checkpoint d=543900000000: a=75fb2993f3caae5775fb2993f3caae57 b=00b283b2c65aa87f00b283b2c65aa87f
+checkpoint d=567600000000: a=4f29dcc5082256e34f29dcc5082256e3 b=57ee7a7168a6413757ee7a7168a64137
+checkpoint d=567700000000: a=ab347da22f246820ab347da22f246820 b=3540174f1b2645083540174f1b264508
+checkpoint d=567800000000: a=2b8dd27bb0ac15d02b8dd27bb0ac15d0 b=5135f29907d2f1655135f29907d2f165
+checkpoint d=650100000000: a=d2cfdb285ad14d8cd2cfdb285ad14d8c b=9cc3b25b067810f19cc3b25b067810f1
+checkpoint d=650200000000: a=23c230efbbe7dba123c230efbbe7dba1 b=8f20d62ea57459198f20d62ea5745919
+checkpoint d=650300000000: a=bdc9d5f0b4e3bf17bdc9d5f0b4e3bf17 b=c30c1df425141bdec30c1df425141bde
+checkpoint d=1000000000000: a=f8fdb7011ced4d6cf8fdb7011ced4d6c b=5ebe3c6cf324f4f45ebe3c6cf324f4f4
+period histogram (p: count): 32: 188 64: 849199999812
+final labels: a=f8fdb7011ced4d6cf8fdb7011ced4d6c b=5ebe3c6cf324f4f45ebe3c6cf324f4f4
+# Recomputed on the first machine from the same checkpoint (2026-09-26), identical to the last hex digit:
+#   start d=150800000000: a=bb28d1da3719d3cdbb28d1da3719d3cd (p=64) b=4efb996adbd644c74efb996adbd644c7 (p=64)
+#   checkpoint d=150900000000: a=8f72fb25ad6bcf4e8f72fb25ad6bcf4e b=09cec6c46349ba5309cec6c46349ba53
+#   checkpoint d=151000000000: a=6e2de5fda9d179d16e2de5fda9d179d1 b=bbdb5135229f7b19bbdb5135229f7b19
+#   checkpoint d=151100000000: a=ba78694bf58a550cba78694bf58a550c b=e0095fb3d89ac849e0095fb3d89ac849
+#   period histogram (p: count): 64: 300000000
+#   final labels: a=ba78694bf58a550cba78694bf58a550c b=e0095fb3d89ac849e0095fb3d89ac849
+# Recomputed on the first machine (2026-09-30), each step of 10^8 diagonals started from the second machine's own
+# labels at the checkpoint before it, by wall_recursion128 and by the separately written 64-bit wall_recursion
+# (its 16-digit words are the halves of these); both give, to the last hex digit:
+#   checkpoint d=304700000000: a=ec88a37f862b0086ec88a37f862b0086 b=cb52581409aa9beccb52581409aa9bec
+#   checkpoint d=304800000000: a=d4200ee9ae00f68ad4200ee9ae00f68a b=3f5b57679ee1f9683f5b57679ee1f968
+#   checkpoint d=430500000000: a=504a2803d81b6513504a2803d81b6513 b=f0cde2e814c152e2f0cde2e814c152e2
+#   checkpoint d=430600000000: a=afa26fa7a1995700afa26fa7a1995700 b=8914c4e2dfbdeb598914c4e2dfbdeb59
+#   checkpoint d=543800000000: a=9094ee0da9201f679094ee0da9201f67 b=9224e86afcb13adf9224e86afcb13adf
+#   checkpoint d=543900000000: a=75fb2993f3caae5775fb2993f3caae57 b=00b283b2c65aa87f00b283b2c65aa87f
+#   checkpoint d=567700000000: a=ab347da22f246820ab347da22f246820 b=3540174f1b2645083540174f1b264508
+#   checkpoint d=567800000000: a=2b8dd27bb0ac15d02b8dd27bb0ac15d0 b=5135f29907d2f1655135f29907d2f165
+#   checkpoint d=650200000000: a=23c230efbbe7dba123c230efbbe7dba1 b=8f20d62ea57459198f20d62ea5745919
+#   checkpoint d=650300000000: a=bdc9d5f0b4e3bf17bdc9d5f0b4e3bf17 b=c30c1df425141bdec30c1df425141bde
+# The 64-bit program also gives the three checkpoints from 150,800,000,000 above. So 13 of the run's 8,492 steps,
+# at six places up to 650,300,000,000, agree with two programs on the first machine; each step had period 64 only.

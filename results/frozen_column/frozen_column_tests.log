@@ -1,0 +1,43 @@
+frozen column b_B(d) = r_d(d) for d = 90,001 .. 1,000,000,000 (999,910,000 bits)
+density of ones: 0.500029; by block of 1e8: [0.5, 0.49995, 0.50002, 0.50008, 0.50005, 0.50007, 0.50005, 0.50003, 0.49999, 0.50006]
+agreement with the real centre column on d = 90,001 .. 1,130,000: 0.49973 (chance ½ ± 0.00049; z = -0.55)
+periods p <= 10,000,000 on the last 100,000,000 bits: none
+run-length counts (both colours) vs geometric(½) expectation, L = 1..30:
+   L= 1:  249,978,774  expected  249,978,115.0  ratio 1.0000
+   L= 2:  124,996,702  expected  124,989,057.5  ratio 1.0001
+   L= 3:   62,491,277  expected   62,494,528.8  ratio 0.9999
+   L= 4:   31,241,526  expected   31,247,264.4  ratio 0.9998
+   L= 5:   15,622,439  expected   15,623,632.2  ratio 0.9999
+   L= 6:    7,810,197  expected    7,811,816.1  ratio 0.9998
+   L= 7:    3,906,209  expected    3,905,908.0  ratio 1.0001
+   L= 8:    1,954,754  expected    1,952,954.0  ratio 1.0009
+   L= 9:      977,017  expected      976,477.0  ratio 1.0006
+   L=10:      489,008  expected      488,238.5  ratio 1.0016
+   L=11:      244,295  expected      244,119.3  ratio 1.0007
+   L=12:      121,992  expected      122,059.6  ratio 0.9994
+   L=13:       60,854  expected       61,029.8  ratio 0.9971
+   L=14:       30,630  expected       30,514.9  ratio 1.0038
+   L=15:       15,334  expected       15,257.5  ratio 1.0050
+   L=16:        7,649  expected        7,628.7  ratio 1.0027
+   L=17:        3,771  expected        3,814.4  ratio 0.9886
+   L=18:        1,933  expected        1,907.2  ratio 1.0135
+   L=19:          883  expected          953.6  ratio 0.9260
+   L=20:          513  expected          476.8  ratio 1.0759
+   L=21:          250  expected          238.4  ratio 1.0487
+   L=22:          101  expected          119.2  ratio 0.8473
+   L=23:           69  expected           59.6  ratio 1.1577
+   L=24:           27  expected           29.8  ratio 0.9060
+   L=25:           14  expected           14.9  ratio 0.9396
+   L=26:            7  expected            7.4  ratio 0.9396
+   L=27:            4  expected            3.7  ratio 1.0738
+   longest run 32; runs total 499,956,230
+blocks of 8: chi-square 220.4 on 255 dof (mean 255, sd 23); max |dev|/sd = 2.44
+blocks of 12: chi-square 4,067.7 on 4,095 dof (mean 4,095, sd 90); max |dev|/sd = 3.47
+blocks of 16: chi-square 65,474.5 on 65,535 dof (mean 65,535, sd 362); max |dev|/sd = 4.45
+best-guess accuracy of the next bit from the last k bits (½ = no memory):
+   k= 1: 0.500181
+   k= 2: 0.500266
+   k= 4: 0.500498
+   k= 8: 0.502028
+   k=12: 0.508076
+   k=16: 0.532282

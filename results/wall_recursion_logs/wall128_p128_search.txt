@@ -1,0 +1,4 @@
+start d=2107985254: a=ed91e45ced91e45ced91e45ced91e45c (p=32) b=00000000000000000000000000000000 (p=1)
+d=2107985254: frozen diagonal (r_d = 0), p_(d-1)=32, weight 17, candidates b6e14797491eb868b6e14797491eb868 / 491eb868b6e14797491eb868b6e14797 (period 64)
+  branch 0 taken
+d=2107985255: running max of the period reaches 64

@@ -1,0 +1,24 @@
+period 64: 4 runs, 12,000,000,000 diagonals, 6,520,392,219 cycles; ignition delays excluded: [49, 60, 62, 62]
+   k, count, P(k) per cycle:
+     8      1,656,411  2.540e-04
+     9        501,943  7.698e-05
+    10        218,299  3.348e-05
+    11        125,585  1.926e-05
+    12         47,626  7.304e-06
+    13         18,338  2.812e-06
+    14         10,486  1.608e-06
+    15          3,412  5.233e-07
+    16          1,699  2.606e-07
+    17            668  1.024e-07
+    18            276  4.233e-08
+    19            140  2.147e-08
+    20             45  6.901e-09
+    21             40  6.135e-09
+    22             12  1.840e-09
+    23              3  4.601e-10
+    26              1  1.534e-10
+   geometric fit for k >= 12: P(k+1)/P(k) = 0.434; longest stall seen 26 against the bound 63
+   extrapolated P(k >= 64) per cycle = 1.89e-24; expected first stall of 64 after 5.29e+23 cycles = 9.73e+23 diagonals
+   measured P(k >= 14) = 2.574e-06 per cycle: one per 7.15e+05 diagonals
+   measured P(k >= 20) = 1.549e-08 per cycle: one per 1.19e+08 diagonals
+   measured P(k >= 24) = 1.534e-10 per cycle: one per 1.20e+10 diagonals

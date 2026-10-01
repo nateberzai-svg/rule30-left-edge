@@ -1,0 +1,29 @@
+b_B from the frame vs the recursion's column on 90001..1130000: mismatches 0 of 1040000
+Delta_t(t) = c(t) xor b_B(t) for t = 1,000 .. 1,130,000 (1,129,001 bits)
+density of Delta: 0.50015 (sd of a coin 0.00047); density of c: 0.50074; of b_B: 0.49996
+table c vs b_B [[c0b0, c0b1], [c1b0, c1b1]] = [[281772, 281890], [282777, 282562]]; P(c=1|b_B=0) = 0.50089, P(c=1|b_B=1) = 0.50060
+runs of Delta, L = 1..12: 1:281975/282081, 2:141006/141040, 3:70715/70520, 4:34997/35260, 5:17798/17630, 6:8769/8815, 7:4440/4408, 8:2216/2204, 9:1137/1102, 10:536/551, 11:309/275, 12:128/138; longest 21
+autocorrelation lags 1..128: max |r| = 0.00276 (2.9 sd); lags beyond 4 sd: none
+cross-correlation Delta vs b_B, lags -64..64: max |r| = 0.00272; beyond 4 sd: none
+blocks of 8: chi-square 251.9 on 255 dof (sd 23); max |dev|/sd 2.96
+blocks of 12: chi-square 4,133.6 on 4,095 dof (sd 90); max |dev|/sd 3.46
+best guess from the last k bits, Delta / coin of the same length: k=1: 0.5003/0.5007, k=2: 0.5009/0.5007, k=4: 0.5014/0.5018, k=8: 0.5059/0.5059, k=12: 0.5244/0.5244, k=16: 0.5955/0.5952
+P(Delta=1 | t mod 16): range 0.4966..0.5027, max |dev| from ½ = 1.8 sd
+P(Delta=1 | t mod 32): range 0.4950..0.5051, max |dev| from ½ = 1.9 sd
+P(Delta=1 | t mod 64): range 0.4922..0.5076, max |dev| from ½ = 2.1 sd
+P(Delta=1 | wall cells r_t(t-1) r_t(t) r_t(t+1)): 000: 0.5022 (n=140965); 001: 0.5014 (n=141060); 010: 0.4996 (n=140675); 011: 0.4980 (n=141068); 100: 0.4997 (n=141265); 101: 0.5003 (n=141259); 110: 0.5001 (n=141285); 111: 0.4998 (n=141424)
+   next 1 of r_t at distance 1: P(Delta=1) = 0.4999 (n=564811)   next 1 of r_t at distance 2: P(Delta=1) = 0.5009 (n=281788)   next 1 of r_t at distance 3: P(Delta=1) = 0.5000 (n=141259)   next 1 of r_t at distance 4: P(Delta=1) = 0.5005 (n=70930)   next 1 of r_t at distance 5: P(Delta=1) = 0.4992 (n=35110)   next 1 of r_t at distance 6: P(Delta=1) = 0.4988 (n=17609)   next 1 of r_t at distance 7: P(Delta=1) = 0.4958 (n=8664)   next 1 of r_t at distance 8: P(Delta=1) = 0.5082 (n=4400)
+P(Delta=1 | p_t = 16) = 0.4992 (n=86542)
+P(Delta=1 | p_t = 32) = 0.5002 (n=1042112)
+edge at diagonal t: P(Delta=1 | move) = 0.5000 (n=434368), P(Delta=1 | wait) = 0.4996 (n=364631)
+   depth of the column below the front in [271,66226]: P(Delta=1) = 0.4990 (n=199748)
+   depth of the column below the front in [66226,129814]: P(Delta=1) = 0.5014 (n=199751)
+   depth of the column below the front in [129814,192743]: P(Delta=1) = 0.5001 (n=199743)
+   depth of the column below the front in [192743,256068]: P(Delta=1) = 0.4989 (n=199757)
+   mode E at t: P(Delta=1) = 0.4996 (n=199671)
+   mode R at t: P(Delta=1) = 0.4997 (n=164960)
+   mode jump at t: P(Delta=1) = 0.5000 (n=434368)
+   transient of diagonal t continues 0..1000 rows above the column: P(Delta=1) = 0.5009 (n=2208)
+   transient of diagonal t continues 1000..100000 rows above the column: P(Delta=1) = 0.4999 (n=303631)
+   transient of diagonal t continues 100000..200000 rows above the column: P(Delta=1) = 0.5000 (n=315399)
+   transient of diagonal t continues 200000..300000 rows above the column: P(Delta=1) = 0.4995 (n=177761)

@@ -1,0 +1,7 @@
+# Speed of the label recursion (one core, idle machine: 4-core Intel Xeon @ 2.80GHz, gcc 13.3 -O2, 2026-09-26).
+# Each run: 2*10^8 diagonals, wall-clock time; two repetitions each.
+wall_recursion128 88d1fb8488d1fb84 7cb53b6b7cb53b6b 90000 200090000 "" 0                      period 32, 128-bit words: 6.66 s, 6.51 s  (30.0, 30.7 million diagonals/s)
+wall_recursion    88d1fb8488d1fb84 7cb53b6b7cb53b6b 90000 200090000 "" 0                      period 32,  64-bit words: 15.13 s, 15.32 s (13.2, 13.1 million diagonals/s)
+wall_recursion128 bb28d1da...19d3cd 4efb996a...d644c7 150800000000 151000000000 "" 128     period 64, 128-bit words: 6.83 s, 6.85 s  (29.3, 29.2 million diagonals/s)
+# Consistent with the frozen column's 10^9 diagonals in about 35 s (results/README.md). An earlier timing
+# (11.2 and 6.7 million/s for 128-bit words) was taken while other jobs shared the machine and is superseded.
