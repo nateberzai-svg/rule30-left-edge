@@ -4,7 +4,11 @@ Code, data and logs accompanying
 
 > N. Berzai, *The left edge of Rule 30 without Rule 30: the stripe recursion, Wolfram's number 2,107,985,255, and the forks beyond it*, 30 September 2026 — `paper/wolfram_number_note.pdf`.
 
-Every number stated in the note is recomputed by `paper/verify_claims.py` from the files here. Every numbered
+The note cites a longer paper, also here:
+
+> N. Berzai, *The centre column of Rule 30: excluded periods, decimation of the Duhamel class, and the front of the diagonal defects*, 2026 — `paper/RULE30_PAPER.pdf` (95 pages; source `paper/RULE30_PAPER.tex`).
+
+The note is self-contained; nothing it proves depends on the longer paper. Every number stated in the note is recomputed by `paper/verify_claims.py` from the files here. The longer paper's own scripts are not all in this repository; it names them by file. Every numbered
 result in the note carries a status label (Proved / Exact / Measured / Known / Open); nothing is claimed beyond
 its label.
 
@@ -12,7 +16,7 @@ its label.
 
 | folder | contents |
 |---|---|
-| `paper/` | the note (`.tex`, `.pdf`), its figures and the script that draws them, the data the verifier reads (`data/labels_800k.npz`: the eventual patterns of the seed's first 800,000 diagonals; `data/centre_column_1130k.npz`: the centre column to row 1,130,000), the verifier and its last output |
+| `paper/` | the note (`.tex`, `.pdf`), the longer paper (`RULE30_PAPER.tex`, `.pdf`), the note's figures and the script that draws them, the data the verifier reads (`data/labels_800k.npz`: the eventual patterns of the seed's first 800,000 diagonals; `data/centre_column_1130k.npz`: the centre column to row 1,130,000), the verifier and its last output |
 | `scripts/` | the programs: `wall_recursion.c` / `wall_recursion128.c` (the stripe recursion with 64- and 128-bit patterns), `edge_machine.c` (the coin-driven edge machine), `label_distance.c` (the fork law), `stall_lookback_trace.py` / `stall_lookback.py` / `stall_census.py` (Theorem 6.5 and Remark 6.6), `frozen_column.py` / `frozen_column_autocorr.py` (Section 7), `verify_frontier_segments.py` (re-checks every step of a frontier log with an independently written program) |
 | `bin/` | Windows builds of the three C programs (see `bin/README.md`) |
 | `results/wall_recursion_logs/` | the recursion's logs: the run from the doubling to 1.508·10¹¹, the second machine's run from there to 10¹² with its checkpoints, the recomputed steps, the timing |
