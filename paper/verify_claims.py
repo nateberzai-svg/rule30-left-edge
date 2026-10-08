@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Recompute every number stated in paper/wolfram_number_note.tex from the data in this repository.
+"""Check the statements of paper/wolfram_number_note.tex against the data and logs in this repository (45 checks).
+Statements up to diagonal 800,000 are recomputed from the data; the long runs are read from their logs, not repeated (the autocorrelation of the frozen column is the exception, see below);
+figures the note quotes from other sources are not checked.
 
 Each check prints PASS, FAIL or SKIP, the claim as the paper states it, and the value computed here.
 Run from the repository root:   python paper/verify_claims.py [--quick]
