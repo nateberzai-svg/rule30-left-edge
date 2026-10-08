@@ -1,4 +1,6 @@
-# The seed's wall beyond 1.508*10^11, computed on a second machine (the author's PC, under WSL Ubuntu), continuing
+# The wall on branch 6cbda353 of the fork at 1,420,878,968 (the candidate with 18 black cells; that the seed takes
+# it is measured, not proved: note, Section 6) beyond 1.508*10^11, computed on a second machine (the author's PC,
+# under WSL Ubuntu), continuing
 # from results/wall_recursion_logs/frontier_checkpoint.txt with
 #   ./wall_recursion128 bb28d1da3719d3cdbb28d1da3719d3cd 4efb996adbd644c74efb996adbd644c7 150800000000 1000000000000 "" 128 - > wall128_to_1e12.log
 # With no branch bits the program stops at the first frozen diagonal, and with STOPP = 128 when the running maximum

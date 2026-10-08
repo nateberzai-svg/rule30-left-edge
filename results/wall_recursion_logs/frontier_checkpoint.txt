@@ -1,4 +1,5 @@
-# Latest checkpoint of the seed's wall (branch 1 at 1,420,878,968; period 64 since 2,107,985,255; no constant stripe since).
+# Latest checkpoint of the wall on branch 1 at 1,420,878,968 (6cbda353, the candidate with 18 black cells; period 64
+# since 2,107,985,255; no constant stripe since). That the seed takes branch 1 is measured, not proved (note, Section 6).
 # Labels r_{d-1} = a and r_d = b as 128-bit words (bit t = r(t mod 128)), as wall_recursion128 prints and accepts them.
 d=150800000000
 a=bb28d1da3719d3cdbb28d1da3719d3cd

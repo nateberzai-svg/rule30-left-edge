@@ -8,7 +8,7 @@ The note cites a longer paper, also here:
 
 > N. Berzai, *The centre column of Rule 30: excluded periods, decimation of the Duhamel class, and the front of the diagonal defects*, 2026 — `paper/RULE30_PAPER.pdf` (95 pages; source `paper/RULE30_PAPER.tex`).
 
-The note is self-contained; nothing it proves depends on the longer paper. Every number stated in the note is recomputed by `paper/verify_claims.py` from the files here. The longer paper's own scripts are not all in this repository; it names them by file. Every numbered
+The note is self-contained; nothing it proves depends on the longer paper. `paper/verify_claims.py` runs 45 checks on the note's own statements: it recomputes those up to diagonal 800,000 from the data here, reruns three short scripts and (with a C compiler) thirteen steps of the frontier run, and reads the long runs from their logs without repeating them (it recomputes the autocorrelations of the 10⁹-bit column only when that file has been regenerated); it does not check figures quoted from other sources. The longer paper's own scripts are not all in this repository; it names them by file. Every numbered
 result in the note carries a status label (Proved / Exact / Measured / Known / Open); nothing is claimed beyond
 its label.
 
@@ -41,6 +41,26 @@ this by direct simulation on 7 October 2026: before the frozen diagonal 53,207 i
 up to a shift of rows, after it they differ and no shift matches them. So a finite starting word can take the other
 branch, and the paper's left-half universality conjecture is false as stated (it is marked refuted there). In a comment on Eric Rowland's video *The Hidden Structure of Rule 30* the author also reports that more
 than 2¹⁷ random starting states all took the seed's branch there.
+
+A second search, on 7–8 October 2026, found that other facts the note proves or uses were also public before it.
+The note credits each where it states the fact. We claim no priority for them.
+
+- The twin criterion (a diagonal ends all white exactly when the two before it carry the same pattern): Lemma A of
+  Patto1155/rule30-foundry, commit `d612567`, 19 August 2026 (on its main branch since 28 August 2026), with proof;
+  also Dibujaron/rule30, commit `59a9c26`, 8 September 2026.
+- The landing rule of the front (a move ends at the first black cell of the stripe), the monotone front, no move at a
+  frozen diagonal, and the split of the picture into a settled part and a defect: Dibujaron/rule30, commit `a8dbbc0`,
+  8 September 2026 (the landing rule checked on 60,065 of 60,065 diagonals), with `0a1cda2`, `94e15f8` and `9c853e4`.
+  The code of Wolfram's 2019 prize post takes a running maximum for the front.
+- The settled configuration and its centre column, to 10⁹ terms and in Lean: Dibujaron/rule30, commits `0a1cda2`,
+  `47f8ab5`, `b7b9195` and `980d553`, 7–8 September 2026. This is the background column b_B of Section 7.
+- The coin model of the stripes, its rate 2^-P and its even split between doublings and forks: Wolfram 1986;
+  Gravner–Griffeath 2012, §8; Patto1155/rule30-foundry (19 August 2026); Dibujaron/rule30 (8 September 2026).
+- Conjecture H (the stripes never cross the centre column): asked as a question in Wolfram's 2019 prize post; stated
+  in Patto1155/rule30-foundry (commit `08786d1`) and in Dibujaron/rule30, which checks it to d = 200,000. The data
+  file of the 2019 post holds exact settling times of 78,288 diagonals (to d = 78,287); OEIS A363346 has 1,000 terms.
+- The one-step law behind the recursion: Rowland 2006, Lemma 3. The pair-period law: T. Nersissian,
+  arXiv:2609.25077 (18 September 2026), Lemma 2.
 
 ## Layout
 

@@ -4,7 +4,9 @@
 - `edge_machine.exe`: the edge automaton in C (`scripts/edge_machine.c`).
 - `wall_recursion.exe`: the 64-bit-label recursion (`scripts/wall_recursion.c`).
 
-Run them from PowerShell in the repository folder. To continue the seed's wall from the checkpoint in
+Run them from PowerShell in the repository folder. To continue the wall on branch `6cbda353` (the candidate
+with 18 black cells at the fork 1,420,878,968; that the seed takes this branch is measured, not proved:
+Section 6 of the note) from the checkpoint in
 `results/wall_recursion_logs/frontier_checkpoint.txt` toward 10¹² (about eight hours; a checkpoint line every
 few seconds), open a PowerShell window you can leave open and run
 
