@@ -12,6 +12,36 @@ The note is self-contained; nothing it proves depends on the longer paper. Every
 result in the note carries a status label (Proved / Exact / Measured / Known / Open); nothing is claimed beyond
 its label.
 
+## Prior public work
+
+The eighth frozen diagonal, d = 1,420,878,968, and the first period-64 onsets on its two branches (2,107,985,255 and,
+on the other side, 9,958,700,505) were, to our knowledge, first made public on 8 September 2026 in two independent
+code repositories:
+
+- [Dibujaron/rule30](https://github.com/Dibujaron/rule30) (Drew McPolstra), commit `94833d2`, 8 September 2026.
+  It gives the eighth all-white diagonal at 1,420,878,968, with two complementary continuations. On one, period 64
+  starts at exactly 2,107,985,255, which it identifies with NKS p. 871. On the other, the next all-white diagonals
+  are 3,340,408,059 and 4,989,445,007, and there is no doubling below 5.16·10⁹.
+- [Patto1155/rule30-foundry](https://github.com/Patto1155/rule30-foundry), commit `04f30f6` (pull request 32),
+  merged 8 September 2026 from a run of about 30 August 2026. It gives the first branch point at 1,420,878,969 with
+  continuations `0x93425cac` and `0x6cbda353`, doublings at 2,107,985,255 and 9,958,700,505, and the whole branch
+  tree below 1.2·10¹⁰. On 19 August 2026 it had given the exact periods of the left diagonals for d < 10⁶.
+
+We obtained the same integers independently on 24 September 2026 and learned of these repositories on
+1 October 2026. We found the numbers in no paper, preprint or OEIS entry. We claim no priority for them.
+The logs in this repository follow the branch `93425cac` only to its next frozen diagonal, 3,340,408,059; our run to
+9,958,700,505 is not included here.
+
+To our knowledge no public source determines which branch the pattern grown from one cell takes at 1,420,878,969.
+Neither repository does: the first infers the branch from the match with NKS and lists it as not checked; the
+second records the actual diagonal as unresolved. A gist by
+[szymon-lania](https://gist.github.com/szymon-lania/2535d62468a7912137b5002d900ebdd6) (21 August 2026) gives a
+starting state that takes the other branch at diagonal 53,209 (53,208 in the indexing used here); we checked
+this by direct simulation on 7 October 2026: before the frozen diagonal 53,207 its left diagonals match the seed's
+up to a shift of rows, after it they differ and no shift matches them. So a finite starting word can take the other
+branch, and the paper's left-half universality conjecture is false as stated (it is marked refuted there). In a comment on Eric Rowland's video *The Hidden Structure of Rule 30* the author also reports that more
+than 2¹⁷ random starting states all took the seed's branch there.
+
 ## Layout
 
 | folder | contents |
@@ -25,7 +55,7 @@ its label.
 | `results/fork_mechanism/` | the labels around the fork, the eight machines across the fork and across the doubling, the census of front histories |
 | `results/frozen_column/` | the tests of the background column b_B (Section 7); the 10⁹-bit column itself (125 MB) is not included and is regenerated in 35 s, see below |
 | `results/front_800k_derived.npz` | the front M_d and settling times τ_d of the seed to d = 800,000, from a direct simulation |
-| `ledger/` | the two working-record entries the verifier cites for the edge machine's validations |
+| `ledger/` | the two working-record entries the verifier cites for the edge machine's validations (written 24–25 September 2026; each opens with a note, added 7 October 2026, on the prior public work above) |
 
 ## Reproducing
 
