@@ -2,11 +2,11 @@
 
 Code, data and logs accompanying
 
-> N. Berzai, *The left edge of Rule 30 without Rule 30: the stripe recursion, Wolfram's number 2,107,985,255, and the forks beyond it*, 30 September 2026 — `paper/wolfram_number_note.pdf`.
+> N. Berzai, *The left edge of Rule 30 without Rule 30: the stripe recursion, Wolfram's number 2,107,985,255, and the forks beyond it*, 30 September 2026; revised 8 October 2026 — `paper/wolfram_number_note.pdf`.
 
 The note cites a longer paper, also here:
 
-> N. Berzai, *The centre column of Rule 30: excluded periods, decimation of the Duhamel class, and the front of the diagonal defects*, 2026 — `paper/RULE30_PAPER.pdf` (95 pages; source `paper/RULE30_PAPER.tex`).
+> N. Berzai, *The centre column of Rule 30: excluded periods, decimation of the Duhamel class, and the front of the diagonal defects*, 2026 — `paper/RULE30_PAPER.pdf` (99 pages; source `paper/RULE30_PAPER.tex`).
 
 The note is self-contained; nothing it proves depends on the longer paper. `paper/verify_claims.py` runs 45 checks on the note's own statements: it recomputes those up to diagonal 800,000 from the data here, reruns three short scripts and (with a C compiler) thirteen steps of the frontier run, and reads the long runs from their logs without repeating them (it recomputes the autocorrelations of the 10⁹-bit column only when that file has been regenerated); it does not check figures quoted from other sources. The longer paper's own scripts are not all in this repository; it names them by file. Every numbered
 result in the note carries a status label (Proved / Exact / Measured / Known / Open); nothing is claimed beyond
